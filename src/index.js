@@ -57,6 +57,14 @@ function removeProduct(event) {
 
 function createProduct() {
   //... your code goes here
+  const parentDom = document.querySelector('tbody')
+  //checking the correct target
+  //parentDom.style.backgroundColor = 'red'
+  const customName = document.querySelector('.create-product input[type=text]').value
+  //console.log(customName)
+  const customPrice = document.querySelector('.create-product input[type=number]').value
+  //console.log(customPrice)
+
 }
 
 window.addEventListener('load', () => {
@@ -69,4 +77,6 @@ window.addEventListener('load', () => {
     removeItem[i].addEventListener('click', removeProduct);
   }
 
+  const createItem = document.getElementById ('create');
+  createItem.addEventListener('click', createProduct)
 });
